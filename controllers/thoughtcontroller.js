@@ -50,6 +50,25 @@ const thoughtcontroller = {
             res.status(500).json(err);
         }
     },
+
+    async updateThought(req, res) {
+        try {
+            const thought = await Thought.findByIdAndUpdate(req.params.thoughtId, {
+                $set: req.body
+            }, { new: true });
+    
+
+    if (!thought) {
+        res.status(404).json({ message: 'Thought not found' });
+        return;
+    }
+
+    res.status(200).json(thought);
+
+        } catch (err) {
+            res.status(500).json(err);
+        }
+},
 }
 
 module.exports = thoughtcontroller;
