@@ -32,7 +32,7 @@ const usercontroller = {
         } catch (err) {
             res.status(500).json(err);
         }
-    }
+    },
 
     async createUser(req, res) {
         try {
