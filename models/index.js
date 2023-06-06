@@ -1,4 +1,8 @@
-const userRoutes = require('./userroutes');
-const thoughtRoutes = require('./thoughtroutes');
+const express = require('express');
+const router = express.Router();
 
-module.exports = { userRoutes, thoughtRoutes, };
+router.get('/', (req, res) => {
+  res.send('Hello from userroutes!');
+});
+
+module.exports = router;
