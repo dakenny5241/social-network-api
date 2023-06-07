@@ -21,4 +21,4 @@ Finally, start the server.
 npm start
 
 
-The server will be running on port 5000. You can test the API routes using a tool such as Insomnia.
+The server will be running on port 3001. You can test the API routes using a tool such as Insomnia.
