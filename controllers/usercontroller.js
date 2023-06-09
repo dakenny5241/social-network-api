@@ -36,10 +36,12 @@ const usercontroller = {
 
     async createUser(req, res) {
         try {
+            console.log(req.body);
             const user = await User.create(req.body);
             res.status(200).json(user);
         }
         catch (err) {
+            console.log(err);
             res.status(500).json(err);
         }
     },
